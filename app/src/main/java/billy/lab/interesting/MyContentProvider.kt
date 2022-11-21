@@ -32,10 +32,6 @@ class MyContentProvider : ContentProvider() {
     override fun insert(uri: Uri, values: ContentValues?): Uri? {
         val db = sqLiteHelper.writableDatabase
 
-//        if (uriMatcher.match(uri) != 1) {
-//            throw IllegalArgumentException("Unknown URI: $uri")
-//        }
-
         db.insert(Setting.TABLE_NAME, null, values)
             .takeIf { it > 0 }
             .apply {
