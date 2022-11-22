@@ -20,6 +20,15 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Interesting"
         tools:targetApi="31">
+
+        <provider
+            android:name=".MyContentProvider"
+            android:authorities="billy.lab.interesting.provider"
+            android:readPermission="billy.lab.permission.READ_PERMISSION"
+            android:writePermission="billy.lab.permission.WRITE_PERMISSION"
+            android:enabled="true"
+            android:exported="true" />
+
         <activity
             android:name=".MainActivity"
             android:exported="true">
@@ -30,13 +39,7 @@
             </intent-filter>
         </activity>
 
-        <provider
-            android:name=".MyContentProvider"
-            android:authorities="billy.lab.interesting.provider"
-            android:readPermission="billy.lab.permission.READ_PERMISSION"
-            android:writePermission="billy.lab.permission.WRITE_PERMISSION"
-            android:enabled="true"
-            android:exported="true" />
+
     </application>
 
 </manifest>
