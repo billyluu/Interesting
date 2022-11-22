@@ -1,7 +1,7 @@
 # Interesting
 
 
-### Project A (分享數據App)
+### Project A (分享數據App, `Content Provider + SQLite`)
 AndroidManifest.xml
 ```xml
 <Manifest
